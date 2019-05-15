@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Timer & Stopwatch</title>
+    <link rel="stylesheet" href="build/css/all.min.css">
+</head>
+<body>
+    <div id="app" class="container">
+
+        <div class="tabs">
+            <button type="button" class="tab-links timer active" data-name="timer">Timer</button>
+            <button type="button" class="tab-links stopwatch" data-name="stopwatch">Stopwatch</button>
+        </div>
+
+        <div class="tab-content tab-content-timer" id="timer">
+            <form class="timer-controls">
+                <div class="timer-controls-row">
+                    <label for="timer-hours">Hours:</label>
+                    <input type="text" id="timer-hours" maxlength="2" size="2" value="00">
+                </div>
+                <div class="timer-controls-row">
+                    <label for="timer-minutes">Minutes:</label>
+                    <input type="text" id="timer-minutes" maxlength="2" size="2" value="05">
+                </div>
+                <div class="timer-controls-row">
+                    <label for="timer-seconds">Seconds:</label>
+                    <input type="text" id="timer-seconds" maxlength="2" size="2" value="00">
+                </div>
+            </form>
+            <div class="timer-output">
+                <div class="timer-wrapper">
+                    <div class="timer-output-hours">00</div>
+                    <span>h</span>
+                    <div class="timer-output-minutes">05</div>
+                    <span>m</span>
+                    <div class="timer-output-seconds">00</div>
+                    <span>s</span>
+                </div>
+                <div class="timer-buttons-nav">
+                    <button type="button" id="timer-start" class="btn btn-blue">start</button>
+                    <button type="button" id="timer-stop" class="btn btn-blue">stop</button>
+                    <button type="button" id="timer-reset" class="btn btn-blue">reset</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content tab-content-stopwatch js-hidden" id="stopwatch">Coming soon :)</div>
+
+    </div>
+
+    <script src="build/js/all.min.js"></script>
+</body>
+</html>

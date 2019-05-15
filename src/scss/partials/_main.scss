@@ -1,0 +1,93 @@
+$tab-button-bg-color: #f0f8ff;
+$font-weight-light: 300;
+
+.container {
+  max-width: 1000px;
+  margin: 50px auto 0;
+}
+
+.tabs {
+  display: flex;
+  background: $tab-button-bg-color;
+  .tab-links {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 15px 25px;
+    transition: background-color 0.2s;
+    &:focus {
+      outline: 0;
+    }
+    &:hover {
+      background-color: darken($tab-button-bg-color, 5%);
+    }
+    &.active {
+      background-color: darken($tab-button-bg-color, 15%);
+    }
+  }
+}
+
+.tab-content {
+  padding: 20px 0;
+}
+
+.tab-content-timer {
+  display: flex;
+  .timer-controls {
+    width: 25%;
+    .timer-controls-row {
+      margin-bottom: 20px;
+      label {
+        display: inline-block;
+        margin-bottom: 7px;
+      }
+      input {
+        display: block;
+        padding: 10px 14px;
+        text-align: center;
+        font-size: 20px;
+        border: 1px solid darken($tab-button-bg-color, 15%);
+        transition: 0.2s;
+        &[disabled="true"] {
+          background: $tab-button-bg-color;
+          &:hover {
+            cursor: not-allowed;
+          }
+        }
+        &:focus {
+          outline: 0;
+          border: 1px solid darken($tab-button-bg-color, 55%);
+        }
+      }
+    }
+  }
+  .timer-output {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    .timer-wrapper {
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 30px;
+      & > div {
+        font-size: 72px;
+        font-weight: $font-weight-light;
+        line-height: 0.95;
+      }
+      & > span {
+        display: inline-block;
+        margin-right: 15px;
+        font-size: 22px;
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.js-hidden {
+  display: none;
+}
